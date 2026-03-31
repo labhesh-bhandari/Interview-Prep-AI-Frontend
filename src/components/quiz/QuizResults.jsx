@@ -1,5 +1,4 @@
-import { LuTrophy, LuRefreshCw, LuX, LuXCircle } from 'react-icons/lu';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaTrophy, FaRedo, FaTimes, FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 const QuizResults = ({ isOpen, onClose, onRetry, results }) => {
   if (!isOpen || !results) return null;
 
@@ -25,14 +24,14 @@ const QuizResults = ({ isOpen, onClose, onRetry, results }) => {
         <div className='flex items-center justify-between px-6 py-4 border-b border-gray-100'>
           <h3 className='font-semibold text-gray-900'>Quiz Results</h3>
           <button onClick={onClose} className='text-gray-400 hover:text-gray-600 cursor-pointer'>
-            <LuX size={20} />
+            <FaTimes size={20} />
           </button>
         </div>
 
         <div className='p-6 space-y-6'>
           {/* Score card */}
           <div className={`rounded-xl p-6 flex flex-col items-center border ${scoreBg}`}>
-            <LuTrophy size={34} className={scoreColor} />
+            <FaTrophy size={34} className={scoreColor} />
             <div className={`text-5xl font-bold mt-3 ${scoreColor}`}>{score}/{total}</div>
             <div className={`text-xl font-semibold mt-1 ${scoreColor}`}>{percentage}%</div>
             <p className='text-gray-700 font-medium mt-2 text-base'>{msg.text}</p>
@@ -51,7 +50,7 @@ const QuizResults = ({ isOpen, onClose, onRetry, results }) => {
                   <div className='flex items-start gap-2 mb-2'>
                     {a.isCorrect
                       ? <FaCheckCircle size={15} className='text-green-500 mt-0.5 shrink-0' />
-                      : <LuXCircle size={15} className='text-red-400 mt-0.5 shrink-0' />
+                      : <FaTimesCircle size={15} className='text-red-400 mt-0.5 shrink-0' />
                     }
                     <p className='text-sm font-medium text-gray-800'>{i + 1}. {a.question}</p>
                   </div>
@@ -82,7 +81,7 @@ const QuizResults = ({ isOpen, onClose, onRetry, results }) => {
               onClick={onRetry}
               className='flex items-center gap-2 bg-black text-white text-sm font-medium px-5 py-2.5 rounded-lg hover:bg-indigo-600 transition-colors cursor-pointer'
             >
-              <LuRefreshCw size={14} /> Retry Quiz
+              <FaRedo size={14} /> Retry Quiz
             </button>
           </div>
         </div>
