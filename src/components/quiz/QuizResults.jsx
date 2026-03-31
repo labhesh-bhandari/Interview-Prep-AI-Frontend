@@ -1,4 +1,4 @@
-import { LuTrophy, LuRefreshCw, LuX, LuCheckCircle, LuXCircle } from 'react-icons/lu';
+import { LuTrophy, LuRefreshCw, LuX, LuCheckCircle2, LuXCircle } from 'react-icons/lu';
 
 const QuizResults = ({ isOpen, onClose, onRetry, results }) => {
   if (!isOpen || !results) return null;
@@ -50,7 +50,7 @@ const QuizResults = ({ isOpen, onClose, onRetry, results }) => {
                 >
                   <div className='flex items-start gap-2 mb-2'>
                     {a.isCorrect
-                      ? <LuCheckCircle size={15} className='text-green-500 mt-0.5 shrink-0' />
+                      ? <LuCheckCircle2 size={15} className='text-green-500 mt-0.5 shrink-0' />
                       : <LuXCircle size={15} className='text-red-400 mt-0.5 shrink-0' />
                     }
                     <p className='text-sm font-medium text-gray-800'>{i + 1}. {a.question}</p>
