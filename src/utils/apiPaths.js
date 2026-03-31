@@ -1,3 +1,35 @@
+// export const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+// export const API_PATHS = {
+//     AUTH: {
+//         REGISTER: "api/auth/register",
+//         LOGIN: "api/auth/login",
+//         GET_PROFILE: "api/auth/profile"
+//     },
+
+//     IMAGE: {
+//         UPLOAD_IMAGE: "api/auth/upload-image"
+//     },
+
+//     AI: {
+//         GENERATE_QUESTIONS: "api/ai/generate-questions",
+//         GENERATE_EXPLANATION: "api/ai/generate-explanation"
+//     },
+
+//     SESSION: {
+//         CREATE: "api/session/create",
+//         GET_ALL: "api/session/my-sessions",
+//         GET_ONE: (id) => `api/session/${id}`,
+//         DELETE: (id) => `api/session/${id}`
+//     },
+
+//     QUESTION: {
+//         ADD_TO_SESSION: "api/question/add",
+//         PIN: (id) => `api/question/${id}/pin`,
+//         UPDATE_NOTE: (id) => `api/question/${id}/note`
+//     }
+// };
+
 export const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export const API_PATHS = {
@@ -13,7 +45,8 @@ export const API_PATHS = {
 
     AI: {
         GENERATE_QUESTIONS: "api/ai/generate-questions",
-        GENERATE_EXPLANATION: "api/ai/generate-explanation"
+        GENERATE_EXPLANATION: "api/ai/generate-explanation",
+        GENERATE_QUIZ_OPTIONS: "api/ai/generate-quiz-options",
     },
 
     SESSION: {
@@ -27,5 +60,9 @@ export const API_PATHS = {
         ADD_TO_SESSION: "api/question/add",
         PIN: (id) => `api/question/${id}/pin`,
         UPDATE_NOTE: (id) => `api/question/${id}/note`
+    },
+
+    RESUME: {
+        ANALYZE: "api/resume/analyze",
     }
 };
